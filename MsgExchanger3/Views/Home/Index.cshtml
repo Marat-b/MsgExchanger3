@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Параметры сервера </h1>
+    <p>IP адрес @ViewBag.IpAddress</p>
+</div>
+
+<div class="column">
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <td>Названия параметров</td>
+                <td>Данные параметров</td>
+            </tr>
+            
+            <tr>
+                <td>Показатели ОП (свободно/общий размер)</td>
+                <td><span id="memory-free"></span>/<span id="memory-full"></span></td>
+            </tr>
+            <tr>
+                <td>Загруженность ЦП (%)</td>
+                <td><span id="processor"></span></td>
+            </tr>
+            <tr>
+                <td>Состояние дисков (свободно/общий размер)</td>
+                <td><span id="hdd-free"></span>/<span id="hdd-full"></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <div class="col-md-8">
+            <label class="col-form-label">
+                Интервал обновления информации (секундах)
+            </label>
+            <input type="text" placeholder="Интервал в секундах" id="interval" class="form-control" />
+        </div>
+        <p></p>
+        <div class="col-md-8">
+            <button class="btn btn-info" id="btnSend">Отправить</button>
+        </div>
+    </div>
+    
+</div>
